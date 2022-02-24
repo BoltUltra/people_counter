@@ -1,7 +1,16 @@
+// intialize the count as 0
 let count = 0;
+let countEl = document.getElementById("counter");
+let saveEl = document.getElementById("save-item");
 
-document.getElementById("counter").innerText = "5M";
-
+// listen for clicks on the increment button
+// increment the count variable when the button is clicked
 function increment() {
-  //   alert("I was clicked");
+  count += 1;
+  countEl.innerText = count;
+}
+
+function save() {
+  let saveStr = count + " - ";
+  saveEl.innerText += saveStr;
 }
